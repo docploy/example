@@ -1,0 +1,13 @@
+on: [pull_request]
+
+jobs:
+  publish_docs:
+    name: Publish docs
+    runs-on: ubuntu-latest
+    steps:
+      - name: Publish docs
+        uses: docploy/docploy-action@v1.3.0
+        with:
+          baseUrl: 'https://docploy.github.io/example/'
+          docsDir: 'docs'
+          pagesBranch: 'gh-pages'
