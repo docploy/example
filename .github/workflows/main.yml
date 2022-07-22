@@ -1,4 +1,4 @@
-on: [pull_request, push]
+on: [push]
 
 jobs:
   publish_docs:
@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Publish docs
-        uses: docploy/docploy-action@remove_next_underscore
+        uses: docploy/docploy-action@move_gh_pages_script
         with:
           baseUrl: 'https://docploy.github.io/example/'
           docsDir: 'docs'
