@@ -1,4 +1,4 @@
-on: [pull_request, push]
+on: [push]
 
 jobs:
   publish_docs:
@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Publish docs
-        uses: docploy/docploy-action@v1.3.0
+        uses: docploy/docploy-action@support_relpath
         with:
           baseUrl: 'https://docploy.github.io/example/'
           docsDir: 'docs'
