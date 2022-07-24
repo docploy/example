@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Publish docs
-        uses: docploy/docploy-action@move_gh_pages_script
+        uses: docploy/docploy-action@support_relpath
         with:
           baseUrl: 'https://docploy.github.io/example/'
           docsDir: 'docs'
